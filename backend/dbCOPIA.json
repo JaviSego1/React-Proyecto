@@ -1,0 +1,170 @@
+{
+    "videojuegos": [
+      {
+        "id": "1",
+        "nombre": "The Legend of Zelda: Breath of the Wild",
+        "descripcion": "Un vasto mundo abierto lleno de aventuras y secretos por descubrir.",
+        "fecha_lanzamiento": "2017-03-03",
+        "compania": "Nintendo",
+        "plataformas": [
+          1
+        ],
+        "categorias": [
+          1,
+          2
+        ],
+        "precio": 59.99,
+        "url_imagen": "https://www.nintendo.com/eu/media/images/10_share_images/portals_3/2x1_Hub_TheLegendOfZelda_ToTK.jpg",
+        "url_video": "https://www.youtube.com/watch?v=1rPxiXXxftE"
+      },
+  
+      {
+        "id": "2",
+        "nombre": "Halo Infinite",
+        "descripcion": "El Jefe Maestro regresa en una nueva batalla épica.",
+        "fecha_lanzamiento": "2021-12-08",
+        "compania": "343 Industries",
+        "plataformas": [
+          2,
+          3
+        ],
+        "categorias": [
+          3
+        ],
+        "precio": 49.99,
+        "url_imagen": "https://store-images.s-microsoft.com/image/apps.50670.13727851868390641.c9cc5f66-aff8-406c-af6b-440838730be0.d205e025-5444-4eb1-ae46-571ae6895928?q=90&w=480&h=270",
+        "url_video": "https://www.youtube.com/watch?v=PyMlV5_HRWk"
+      },
+      {
+        "id": "3",
+        "nombre": "Minecraft",
+        "descripcion": "Un juego de construcción y aventura en un mundo de bloques infinitos.",
+        "fecha_lanzamiento": "2011-11-18",
+        "compania": "Mojang",
+        "plataformas": [
+          1,
+          4,
+          5
+        ],
+        "categorias": [
+          2,
+          6
+        ],
+        "precio": 26.95,
+        "url_imagen": "https://www.minecraft.net/content/dam/franchise/experiments/1075955/BentoHero_4x_Vanilla_1920x1080.jpg",
+        "url_video": "https://www.youtube.com/watch?v=MmB9b5njVbA"
+      },
+      {
+        "id": "4",
+        "nombre": "FIFA 25",
+        "descripcion": "La última entrega del simulador de fútbol más realista con nuevas características y equipos.",
+        "fecha_lanzamiento": "2025-09-01",
+        "compania": "EA Sports",
+        "plataformas": [
+          2,
+          3,
+          4
+        ],
+        "categorias": [
+          7
+        ],
+        "precio": 69.99,
+        "url_imagen": "https://phantom-marca-mx.unidadeditorial.es/509436f44711198ff512186f13ec3be6/resize/828/f/jpg/mx/assets/multimedia/imagenes/2024/08/13/17235773087919.jpg",
+        "url_video": "https://www.youtube.com/watch?v=example_video_link"
+      },
+      {
+        "id": "5",
+        "nombre": "Pokémon GO",
+        "descripcion": "Un juego de realidad aumentada donde puedes atrapar Pokémon en el mundo real.",
+        "fecha_lanzamiento": "2016-07-06",
+        "compania": "Niantic",
+        "plataformas": [
+          5,
+          6
+        ],
+        "categorias": [
+          7,
+          8
+        ],
+        "precio": 0,
+        "url_imagen": "https://lh3.googleusercontent.com/RGShDyVofSODXIJ0eQ9umAID8tCw9KdqBFrtgCEdrxjJijG1qZBryfECP9IRV1MOJhCk4Za4VYB34DE-hnPesZNNVYMwgHKs9KrNue3LNJRJuw=e365-w1920",
+        "url_video": "https://www.youtube.com/watch?v=2sjhwevKmr0"
+      }
+    ],
+    "categorias": [
+      {
+        "id": "1",
+        "nombre": "Lucha"
+      },
+      {
+        "id": "2",
+        "nombre": "Arcade"
+      },
+      {
+        "id": "3",
+        "nombre": "Plataformas"
+      },
+      {
+        "id": "4",
+        "nombre": "Shooter"
+      },
+      {
+        "id": "5",
+        "nombre": "Estrategia"
+      },
+      {
+        "id": "6",
+        "nombre": "Simulación"
+      },
+      {
+        "id": "7",
+        "nombre": "Deporte"
+      },
+      {
+        "id": "8",
+        "nombre": "Aventura"
+      },
+      {
+        "id": "9",
+        "nombre": "Rol"
+      },
+      {
+        "id": "10",
+        "nombre": "Educación"
+      },
+      {
+        "id": "11",
+        "nombre": "Puzzle"
+      }
+    ],
+    "plataformas": [
+      {
+        "id": "1",
+        "nombre": "PC"
+      },
+      {
+        "id": "2",
+        "nombre": "PS5"
+      },
+      {
+        "id": "3",
+        "nombre": "Xbox One"
+      },
+      {
+        "id": "4",
+        "nombre": "Switch"
+      },
+      {
+        "id": "5",
+        "nombre": "Android"
+      },
+      {
+        "id": "6",
+        "nombre": "iOS"
+      },
+      {
+        "id": "7",
+        "nombre": "Otras"
+      }
+    ]
+  }
