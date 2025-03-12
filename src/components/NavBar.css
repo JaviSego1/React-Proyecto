@@ -1,0 +1,60 @@
+/* Estilos del NavBar */
+.navbar {
+  background-color: #2a2a3a;
+  padding: 8px 15px; /* Reducido padding */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil para resaltar el navbar */
+  box-sizing: border-box; /* Para que el padding no cause desbordes */
+}
+
+/* Contenedor del NavBar */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box; /* Aseguramos que el padding no afecte el tamaño total */
+  padding: 0 10px; /* Añadir algo de padding para que no toque los bordes */
+}
+
+/* Esto mueve el contenedor de los enlaces hacia la derecha */
+.nav-right {
+  margin-left: auto; /* Empuja el contenedor de los enlaces hacia la derecha */
+  display: flex;
+  gap: 15px; /* Separa los enlaces */
+  flex-wrap: wrap; /* Asegura que si el espacio es reducido los enlaces no se salgan */
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0 10px; /* Reducir margen a la izquierda y derecha */
+  transition: color 0.3s;
+  white-space: nowrap; /* Evita que el texto se divida */
+}
+
+.nav-link:hover {
+  color: #ff8c00; /* Color de hover */
+}
+
+.navbar h1 {
+  font-size: 1.8rem;
+  color: #ff8c00;
+  white-space: nowrap; /* Evita que el título se divida */
+}
+
+/* Ajustes para pantallas más grandes */
+@media (min-width: 768px) {
+  .navbar {
+    padding: 12px 20px; /* Ajuste pequeño */
+  }
+
+  .nav-link {
+    font-size: 18px; /* Tamaño ajustado */
+  }
+}

@@ -5,24 +5,22 @@ body {
   color: #ffffff;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
 }
 
 #root {
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 0;
   padding: 2rem;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box; /* Asegura que los márgenes y el padding no causen desbordamiento */
 }
 
 /* Títulos */
 h1 {
   font-size: 2.5rem;
   color: #ff8c00;
-  margin-bottom: 1rem;
 }
 
 /* Buscador */
@@ -73,6 +71,8 @@ input[type="checkbox"] {
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+  margin-top: 80px; /* Aumentado para que el navbar no tape el contenido */
+  width: 100%; /* Aseguramos que ocupe el 100% del contenedor */
 }
 
 .lista-videojuegos div {
@@ -83,6 +83,7 @@ input[type="checkbox"] {
   cursor: pointer;
   width: 250px;
   text-align: center;
+  box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
 }
 
 .lista-videojuegos div:hover {
@@ -103,6 +104,7 @@ input[type="checkbox"] {
   text-align: left;
   max-width: 600px;
   margin: 20px auto;
+  box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
 }
 
 .detalle-videojuego img {

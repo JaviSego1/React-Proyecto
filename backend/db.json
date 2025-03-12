@@ -1,4 +1,26 @@
 {
+  "users": [
+    {
+      "email": "luis@gmail.com",
+      "password": "hola",
+      "id": 1
+    },
+    {
+      "email": "ana@gmail.com",
+      "password": "$2a$10$cWKEDaF/4/mOuRHeRnm5r.68EUWqaJswEtN9pIuyt/U33xk0uVuyG",
+      "id": 2
+    },
+    {
+      "email": "hola@gmail.com",
+      "password": "$2a$10$GN61WcuGNk69mJTraDhU6ODpJFJWVCfL9/AnMVa7F30kSZjXdVuIe",
+      "id": 3
+    },
+    {
+      "email": "pepe@gmail.com",
+      "password": "$2a$10$5Dwq0aH6dmij1UcUzcN.BeZlG47sS8KBc/GzeoPeruyN.jHeRM/fC",
+      "id": 4
+    }
+  ],
   "videojuegos": [
     {
       "id": "1",
@@ -17,7 +39,6 @@
       "url_imagen": "https://www.nintendo.com/eu/media/images/10_share_images/portals_3/2x1_Hub_TheLegendOfZelda_ToTK.jpg",
       "url_video": "https://www.youtube.com/watch?v=1rPxiXXxftE"
     },
-
     {
       "id": "2",
       "nombre": "Halo Infinite",

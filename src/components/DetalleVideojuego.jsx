@@ -8,17 +8,18 @@ const DetalleVideojuego = () => {
 
   if (!videojuegoSeleccionado) return null;
 
-  // Obtener los nombres de las categorías del videojuego
-  const categoriasVideojuego = videojuegoSeleccionado.categorias.map((catId) => {
-    const categoria = categorias.find((cat) => cat.id === catId.toString()); // Convertir a string
-    return categoria ? categoria.nombre : "Categoría desconocida";
-  });
+  // Verificar que las categorías y plataformas sean arreglos antes de usar map
+  const categoriasVideojuego = Array.isArray(videojuegoSeleccionado.categorias) ? 
+    videojuegoSeleccionado.categorias.map((catId) => {
+      const categoria = categorias.find((cat) => cat.id === catId.toString()); // Convertir a string
+      return categoria ? categoria.nombre : "Categoría desconocida";
+    }) : [];
 
-  // Obtener los nombres de las plataformas del videojuego
-  const plataformasVideojuego = videojuegoSeleccionado.plataformas.map((platId) => {
-    const plataforma = plataformas.find((plat) => plat.id === platId.toString()); // Convertir a string
-    return plataforma ? plataforma.nombre : "Plataforma desconocida";
-  });
+  const plataformasVideojuego = Array.isArray(videojuegoSeleccionado.plataformas) ? 
+    videojuegoSeleccionado.plataformas.map((platId) => {
+      const plataforma = plataformas.find((plat) => plat.id === platId.toString()); // Convertir a string
+      return plataforma ? plataforma.nombre : "Plataforma desconocida";
+    }) : [];
 
   return (
     <div className="modal-overlay" onClick={() => setVideojuegoSeleccionado(null)}>
@@ -30,10 +31,10 @@ const DetalleVideojuego = () => {
         <p>Compañía: {videojuegoSeleccionado.compania}</p>
         <p>Precio: {videojuegoSeleccionado.precio} €</p>
         <p>
-          <strong>Categorías:</strong> {categoriasVideojuego.join(", ")}
+          <strong>Categorías:</strong> {categoriasVideojuego.length > 0 ? categoriasVideojuego.join(", ") : "Sin categorías"}
         </p>
         <p>
-          <strong>Plataformas:</strong> {plataformasVideojuego.join(", ")}
+          <strong>Plataformas:</strong> {plataformasVideojuego.length > 0 ? plataformasVideojuego.join(", ") : "Sin plataformas"}
         </p>
         <button onClick={() => setVideojuegoSeleccionado(null)}>Cerrar</button>
         <button onClick={() => eliminarVideojuego(videojuegoSeleccionado.id)}>Eliminar</button>
