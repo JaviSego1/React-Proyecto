@@ -12,7 +12,7 @@ const VideojuegosProvider = ({ children }) => {
   const [categoriasSeleccionadas, setCategoriasSeleccionadas] = useState([]);
   const [plataformasSeleccionadas, setPlataformasSeleccionadas] = useState([]);
   const [terminoBusqueda, setTerminoBusqueda] = useState("");
-  const [videojuegoSeleccionado, setVideojuegoSeleccionado] = useState([]);
+  const [videojuegoSeleccionado, setVideojuegoSeleccionado] = useState(null);
 
   useEffect(() => {
     const token = localStorage.getItem(TOKEN_KEY);
