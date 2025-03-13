@@ -1,18 +1,35 @@
-import { Link } from "react-router-dom"; // Si estás utilizando react-router
-import "./NavBar.css"; // Asegúrate de tener el archivo CSS para darle estilo
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
+import "./NavBar.css";
 
 const NavBar = () => {
+  const { user, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogout = (event) => {
+    event.preventDefault(); // Evita la navegación predeterminada del enlace
+    logout();
+    navigate("/"); // Redirige al login
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-container">
-        {/* Enlace a los videojuegos */}
-        <h1>Videojuegos</h1> {/* Puedes dejarlo aquí o en otro lugar si lo prefieres */}
+        <h1>Videojuegos</h1>
         
-        {/* Contenedor para los enlaces alineados a la derecha */}
         <div className="nav-right">
-        <Link to="/videojuegos" className="nav-link">Videojuegos</Link>
-          <Link to="/" className="nav-link">Login</Link>
-          <Link to="/registro" className="nav-link">Registro</Link>
+          {user.isLogged && <Link to="/videojuegos" className="nav-link">Videojuegos</Link>}
+          {!user.isLogged ? (
+            <>
+              <Link to="/" className="nav-link">Login</Link>
+              <Link to="/registro" className="nav-link">Registro</Link>
+            </>
+          ) : (
+            <a href="#" onClick={handleLogout} className="nav-link">
+              Cerrar sesión
+            </a>
+          )}
         </div>
       </div>
     </nav>
