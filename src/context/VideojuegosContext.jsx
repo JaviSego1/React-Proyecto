@@ -1,12 +1,11 @@
 import { createContext, useState, useEffect, useContext } from "react";
-import { AuthContext, TOKEN_KEY } from "../context/AuthContext"; // Importamos el AuthContext
-import axios from 'axios'; // Importamos axios
+import { AuthContext, TOKEN_KEY } from "../context/AuthContext"; 
+import axios from 'axios';
 
-// Asignando el contexto a una constante
 const VideojuegosContext = createContext();
 
 const VideojuegosProvider = ({ children }) => {
-  const { user } = useContext(AuthContext);  // Usamos el AuthContext para obtener el usuario
+  const { user } = useContext(AuthContext); 
   const [videojuegos, setVideojuegos] = useState([]);
   const [categorias, setCategorias] = useState([]);
   const [plataformas, setPlataformas] = useState([]);
@@ -18,7 +17,6 @@ const VideojuegosProvider = ({ children }) => {
   useEffect(() => {
     const token = localStorage.getItem(TOKEN_KEY);
     if (token) {
-      // Reemplazamos fetch por axios
       axios.get("http://localhost:3001/videojuegos", {
         headers: { "Authorization": `Bearer ${token}` }
       })
@@ -29,7 +27,7 @@ const VideojuegosProvider = ({ children }) => {
       })
         .then((response) => {
           setCategorias(response.data);
-          setCategoriasSeleccionadas(response.data.map(categoria => categoria.id));  // Marcar todas las categorías por defecto
+          setCategoriasSeleccionadas(response.data.map(categoria => categoria.id));  
         });
 
       axios.get("http://localhost:3001/plataformas", {
@@ -37,14 +35,13 @@ const VideojuegosProvider = ({ children }) => {
       })
         .then((response) => {
           setPlataformas(response.data);
-          setPlataformasSeleccionadas(response.data.map(plataforma => plataforma.id));  // Marcar todas las plataformas por defecto
+          setPlataformasSeleccionadas(response.data.map(plataforma => plataforma.id));  
         });
     }
   }, [user]);
 
   const eliminarVideojuego = (id) => {
     const token = localStorage.getItem(TOKEN_KEY);
-    // Reemplazamos fetch por axios
     axios.delete(`http://localhost:3001/videojuegos/${id}`, {
       headers: { "Authorization": `Bearer ${token}` }
     })
@@ -70,7 +67,6 @@ const VideojuegosProvider = ({ children }) => {
     });
   };
 
-  // Usando la constante VideojuegosContext.Provider
   return (
     <VideojuegosContext.Provider value={{
       videojuegos,

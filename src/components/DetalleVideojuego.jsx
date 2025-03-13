@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { VideojuegosContext } from "../context/VideojuegosContext";
-import "./DetalleVideojuego.css"; // Asegúrate de importar los estilos
+import "./DetalleVideojuego.css"; 
 
 const DetalleVideojuego = () => {
   const { videojuegoSeleccionado, setVideojuegoSeleccionado, eliminarVideojuego, categorias, plataformas } =
@@ -8,16 +8,15 @@ const DetalleVideojuego = () => {
 
   if (!videojuegoSeleccionado) return null;
 
-  // Verificar que las categorías y plataformas sean arreglos antes de usar map
   const categoriasVideojuego = Array.isArray(videojuegoSeleccionado.categorias) ? 
     videojuegoSeleccionado.categorias.map((catId) => {
-      const categoria = categorias.find((cat) => cat.id === catId.toString()); // Convertir a string
+      const categoria = categorias.find((cat) => cat.id === catId.toString());
       return categoria ? categoria.nombre : "Categoría desconocida";
     }) : [];
 
   const plataformasVideojuego = Array.isArray(videojuegoSeleccionado.plataformas) ? 
     videojuegoSeleccionado.plataformas.map((platId) => {
-      const plataforma = plataformas.find((plat) => plat.id === platId.toString()); // Convertir a string
+      const plataforma = plataformas.find((plat) => plat.id === platId.toString());
       return plataforma ? plataforma.nombre : "Plataforma desconocida";
     }) : [];
 

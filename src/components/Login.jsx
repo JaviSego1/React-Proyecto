@@ -25,7 +25,7 @@ const Login = () => {
 
       const response = await login(email.current.value, passwordValue);
       if (!response.error) {
-        navigate('/videojuegos');  // Redirige al catálogo de videojuegos
+        navigate('/videojuegos'); 
       }
     }
   };
@@ -33,7 +33,6 @@ const Login = () => {
   return (
     <Container component="main" maxWidth="xs" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
       <Box sx={{ padding: 4, display: 'flex', flexDirection: 'column', alignItems: 'center', boxShadow: 3, borderRadius: 2, backgroundColor: '#fff' }}>
-        {/* Título de Iniciar sesión */}
         <Typography variant="h5" sx={{ marginBottom: 2, fontWeight: 'bold', color: '#1976d2' }}>
           Iniciar sesión
         </Typography>

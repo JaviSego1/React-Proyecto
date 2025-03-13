@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import axios from 'axios'; // Importamos axios
+import axios from 'axios';
 
 export const TOKEN_KEY = 'TOKEN';
 
@@ -20,7 +20,7 @@ const AuthProvider = ({ children }) => {
                 password
             });
             if (response.status === 200) {
-                const userToken = response.data;  // Axios ya convierte la respuesta a JSON
+                const userToken = response.data; 
                 console.log(userToken);
                 localStorage.setItem(TOKEN_KEY, userToken.accessToken);
                 setUser({

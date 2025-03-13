@@ -8,9 +8,9 @@ const NavBar = () => {
   const navigate = useNavigate();
 
   const handleLogout = (event) => {
-    event.preventDefault(); // Evita la navegación predeterminada del enlace
+    event.preventDefault();
     logout();
-    navigate("/"); // Redirige al login
+    navigate("/");
   };
 
   return (

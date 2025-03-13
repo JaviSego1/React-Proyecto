@@ -16,19 +16,14 @@
       "id": 3
     },
     {
-      "email": "pepe@gmail.com",
-      "password": "$2a$10$5Dwq0aH6dmij1UcUzcN.BeZlG47sS8KBc/GzeoPeruyN.jHeRM/fC",
+      "email": "javier@gmail.com",
+      "password": "$2a$10$Hqn5lzDORtJsOYsmdzfVluJvv0.i3J2n9ja0.ccS4wxa6gMXATSI6",
       "id": 4
     },
     {
-      "email": "holapepe@gmail.com",
-      "password": "$2a$10$taJuseAQTjd2y1I0l/LPMug/pI8oNF4yX/0g1MVCY4J4i400YmjRy",
+      "email": "holaa@gmail.com",
+      "password": "$2a$10$M7pRzGC3YJ.4ESaD5Aleq.shbyo79T2zwvthBnYpEg/ZpGbc.r.BG",
       "id": 5
-    },
-    {
-      "email": "hola1@gmail.com",
-      "password": "$2a$10$2PMAXXcMrjeW8gqMGKrB/u8Qi5NKUEUmI8b0MuVwc1Nrb2mlnQMDe",
-      "id": 6
     }
   ],
   "videojuegos": [

@@ -8,15 +8,14 @@ const ListaVideojuegos = () => {
   return (
     <div>
       {filtrarVideojuegos().map((videojuego) => {
-        // Obtener los nombres de las categorías del videojuego
         const categoriasVideojuego = videojuego.categorias.map((catId) => {
-          const categoria = categorias.find((cat) => cat.id === catId.toString()); // Convertir a string
+          const categoria = categorias.find((cat) => cat.id === catId.toString()); 
           return categoria ? categoria.nombre : "Categoría desconocida";
         });
 
         // Obtener los nombres de las plataformas del videojuego
         const plataformasVideojuego = videojuego.plataformas.map((platId) => {
-          const plataforma = plataformas.find((plat) => plat.id === platId.toString()); // Convertir a string
+          const plataforma = plataformas.find((plat) => plat.id === platId.toString());
           return plataforma ? plataforma.nombre : "Plataforma desconocida";
         });
 
