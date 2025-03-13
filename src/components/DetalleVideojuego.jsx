@@ -27,9 +27,9 @@ const DetalleVideojuego = () => {
         <h2>{videojuegoSeleccionado.nombre}</h2>
         <img src={videojuegoSeleccionado.url_imagen} alt={videojuegoSeleccionado.nombre} width="300" />
         <p>{videojuegoSeleccionado.descripcion}</p>
-        <p>Fecha de lanzamiento: {videojuegoSeleccionado.fecha_lanzamiento}</p>
-        <p>Compañía: {videojuegoSeleccionado.compania}</p>
-        <p>Precio: {videojuegoSeleccionado.precio} €</p>
+        <p><strong>Fecha de lanzamiento: </strong>{videojuegoSeleccionado.fecha_lanzamiento}</p>
+        <p><strong>Compañía: </strong>{videojuegoSeleccionado.compania}</p>
+        <p><strong>Precio: </strong>{videojuegoSeleccionado.precio} €</p>
         <p>
           <strong>Categorías:</strong> {categoriasVideojuego.length > 0 ? categoriasVideojuego.join(", ") : "Sin categorías"}
         </p>

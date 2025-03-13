@@ -25,7 +25,7 @@ const ListaVideojuegos = () => {
             <h2>{videojuego.nombre}</h2>
             <img src={videojuego.url_imagen} alt={videojuego.nombre} width="200" />
             <p>{videojuego.descripcion.substring(0, 100)}...</p>
-            <p>Precio: {videojuego.precio} €</p>
+            <p><strong>Precio: </strong> {videojuego.precio} €</p>
             <p>
               <strong>Categorías:</strong> {categoriasVideojuego.join(", ")}
             </p>
