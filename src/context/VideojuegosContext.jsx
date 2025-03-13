@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect, useContext } from "react";
 import { AuthContext, TOKEN_KEY } from "../context/AuthContext"; // Importamos el AuthContext
+import axios from 'axios'; // Importamos axios
 
 // Asignando el contexto a una constante
 const VideojuegosContext = createContext();
@@ -17,36 +18,34 @@ const VideojuegosProvider = ({ children }) => {
   useEffect(() => {
     const token = localStorage.getItem(TOKEN_KEY);
     if (token) {
-      fetch("http://localhost:3001/videojuegos", {
+      // Reemplazamos fetch por axios
+      axios.get("http://localhost:3001/videojuegos", {
         headers: { "Authorization": `Bearer ${token}` }
       })
-        .then((response) => response.json())
-        .then((data) => setVideojuegos(data));
+        .then((response) => setVideojuegos(response.data));
 
-      fetch("http://localhost:3001/categorias", {
+      axios.get("http://localhost:3001/categorias", {
         headers: { "Authorization": `Bearer ${token}` }
       })
-        .then((response) => response.json())
-        .then((data) => {
-          setCategorias(data);
-          setCategoriasSeleccionadas(data.map(categoria => categoria.id));  // Marcar todas las categorías por defecto
+        .then((response) => {
+          setCategorias(response.data);
+          setCategoriasSeleccionadas(response.data.map(categoria => categoria.id));  // Marcar todas las categorías por defecto
         });
 
-      fetch("http://localhost:3001/plataformas", {
+      axios.get("http://localhost:3001/plataformas", {
         headers: { "Authorization": `Bearer ${token}` }
       })
-        .then((response) => response.json())
-        .then((data) => {
-          setPlataformas(data);
-          setPlataformasSeleccionadas(data.map(plataforma => plataforma.id));  // Marcar todas las plataformas por defecto
+        .then((response) => {
+          setPlataformas(response.data);
+          setPlataformasSeleccionadas(response.data.map(plataforma => plataforma.id));  // Marcar todas las plataformas por defecto
         });
     }
   }, [user]);
 
   const eliminarVideojuego = (id) => {
     const token = localStorage.getItem(TOKEN_KEY);
-    fetch(`http://localhost:3001/videojuegos/${id}`, {
-      method: "DELETE",
+    // Reemplazamos fetch por axios
+    axios.delete(`http://localhost:3001/videojuegos/${id}`, {
       headers: { "Authorization": `Bearer ${token}` }
     })
       .then(() => {

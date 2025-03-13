@@ -16,14 +16,14 @@ const NavBar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <h1>Videojuegos</h1>
+        <h1>Videojuegos Javier</h1>
         
         <div className="nav-right">
           {user.isLogged && <Link to="/videojuegos" className="nav-link">Videojuegos</Link>}
           {!user.isLogged ? (
             <>
               <Link to="/" className="nav-link">Login</Link>
-              <Link to="/registro" className="nav-link">Registro</Link>
+              <Link to="/register" className="nav-link">Registro</Link>
             </>
           ) : (
             <a href="#" onClick={handleLogout} className="nav-link">

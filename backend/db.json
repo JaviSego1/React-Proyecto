@@ -19,6 +19,16 @@
       "email": "pepe@gmail.com",
       "password": "$2a$10$5Dwq0aH6dmij1UcUzcN.BeZlG47sS8KBc/GzeoPeruyN.jHeRM/fC",
       "id": 4
+    },
+    {
+      "email": "holapepe@gmail.com",
+      "password": "$2a$10$taJuseAQTjd2y1I0l/LPMug/pI8oNF4yX/0g1MVCY4J4i400YmjRy",
+      "id": 5
+    },
+    {
+      "email": "hola1@gmail.com",
+      "password": "$2a$10$2PMAXXcMrjeW8gqMGKrB/u8Qi5NKUEUmI8b0MuVwc1Nrb2mlnQMDe",
+      "id": 6
     }
   ],
   "videojuegos": [
